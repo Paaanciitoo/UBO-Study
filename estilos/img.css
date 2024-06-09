@@ -1,0 +1,32 @@
+:root{
+    --body-font:"Poppins", sans-serif;
+    --h2-font-size: 1.25rem;
+    --fuente-pequeña: .813rem;
+}
+
+/*Tipografía responsiva*/
+@media screen and (min-width: 1120px){
+    :root{
+        --h2-font-size: 1.5rem;
+        --fuente-pequeña: .875rem;
+    }
+}
+
+/*BASE*/
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+    background-color: white;
+    color: #66280a;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}

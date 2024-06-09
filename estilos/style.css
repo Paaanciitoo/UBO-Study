@@ -1,0 +1,380 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Poppins:wght@100;200;300;400;500&display=swap');
+
+:root{
+    --café: #9b6b43;
+    --oscuro: #66280a;
+    --degradado: linear-gradient(90deg, var(--café), var(--oscuro));
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+}
+
+*::selection{
+    background: var(--café);
+    color: white;
+}
+
+header a{
+    text-decoration: none;
+}
+
+html{
+    font-size: 62,4%;
+}
+
+body{
+    background: whitesmoke;
+}
+
+section{
+    min-height: 100vh;
+    padding: 5rem;
+    padding-top: 7.5rem;
+    padding-bottom: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+section h1{
+    padding-bottom: 3rem;
+    font-size: 30px;
+    text-transform: initial;
+    text-align: center;
+}
+
+.img-container img{
+    height: 500px;
+    width: 520px;
+    border-radius: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 40px;
+}
+
+.text-container {
+    padding: 0 20px;
+}
+
+.text-container p{
+    text-transform: initial;
+    text-align:justify;
+    color:#66280a;
+}
+
+.text-container ul li{
+    text-transform: initial;
+    padding-left: 0.8rem;
+    color: #66280a;
+}
+
+.text-container b{
+    font-size: 25px;
+    text-transform: initial;
+    color: #66280a;
+}
+
+header{
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    padding: 1rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    background-color: #efcead;
+}
+
+header .logo{
+    font-size: 1.2rem;
+    color: var(--café);
+}
+header .logo span{
+    color: var(--oscuro);
+}
+
+header .navbar a{
+    font-size: 1rem;
+    margin-left: 2rem;
+    color: var(--café);
+}
+
+header .navbar a:hover{
+    color: var(--oscuro);
+}
+
+header input{
+    display: none;
+}
+
+header label{
+    font-size: 2rem;
+    color: var(--café);
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.inicio{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(../img/inicio_fondo.svg) no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.inicio .image img{
+    width: 40vw;
+    animation: float 3s linear infinite;
+    width: 25rem;
+}
+
+@keyframes float{
+    0%, 100%{
+        transform:translateY(0rem);
+    }
+    50%{
+        transform: translateY(-3.5rem);
+    }
+}
+
+.inicio .content h3{
+    font-size: 3.5rem;
+    color: #66280a;
+    text-transform: uppercase;
+}
+
+.inicio .content p{
+    font-size: 1.4rem;
+    color: #666;
+    padding: 1rem 0;
+    text-transform:initial; 
+}
+
+.inicio .content h3 span{
+    color: var(--café);
+    text-transform: uppercase;
+}
+
+@media(max-width:1200px){
+    html{
+        font-size: 72%;
+    }
+}
+
+@media(max-width:768px){
+    header label{
+        visibility: visible;
+        opacity: 1;
+    }
+
+    header .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 1rem 2rem;
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+        transform-origin: top;
+        transform: scaleY(0);
+        opacity: 0;
+    }
+
+    header .navbar a{
+        display: block;
+        margin: 2rem 0;
+        font-size: 2rem;
+    }
+
+    header input:checked ~ .navbar{
+        transform: scaleY(1);
+        opacity: 1;
+    }
+    
+    header input:checked ~ label::before{
+        content: '\f00d';
+    }
+
+    .inicio{
+        flex-flow: column-reverse;
+    }
+
+    .inicio .image img{
+        width: 100%;
+    }
+
+    .inicio .content h3{
+        font-size: 3.6rem;
+    }
+
+    .inicio .content p{
+        font-size: 1.5rem;
+    }
+
+}
+
+@media(max-width:450px){
+    html{
+        font-size: 49%;
+    }
+}
+
+
+/*CARD CSS*/
+
+.container{
+    display: grid;
+    place-items: center;
+    margin-inline: 1.5rem;
+    padding-block: 5rem;
+}
+
+.card_container{
+    display: grid;
+    row-gap: 3.5rem;
+    padding-bottom: 5rem;
+}
+
+.card_article{
+    position: relative;
+}
+
+.card_img{
+    width: 328px;
+    height: 350px;
+    border-radius: 1.5rem;
+}
+
+.card_data{
+    width: 280px;
+    background-color: rgb(245, 245, 245);
+    padding: 1.5rem 2rem;
+    box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
+    border-radius: 1rem;
+    position: relative;
+    bottom: -1.5rem;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+}
+
+.card_description{
+    display: block;
+    font-size: 12px;
+    margin-bottom: .25rem;
+}
+
+.card_title{
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--café);
+    margin-bottom: .75rem;
+}
+
+.card_button{
+    text-decoration: none;
+    font-size: var(--fuente-pequeña);
+    font-weight: 500;
+    color: #9b6b43;
+}
+
+.card_button:hover{
+    text-decoration: underline;
+}
+
+/*Puntos de quiebre*/
+@media screen and (max-width:340px){
+    .container{
+        margin-inline: 1rem;
+    }
+
+    .card_data{
+        width: 250px;
+        padding: 1rem;
+    }
+}
+
+@media screen and (min-width:768px){
+    .card_container{
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 1.5rem;
+    }
+
+    .card_button{
+        font-size:larger
+    }
+}
+
+@media screen and (min-width:1120px){
+    .container{
+        height: 100vh;
+    }
+
+    .card_container{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .card_img{
+        width: 348px;
+    }
+
+    .card_data{
+        width: 316px;
+        padding-inline: 2.5rem;
+    }
+}
+
+@media (min-width: 768px) {
+    section {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .img-container {
+        flex: 1;
+        margin-right: 2rem;
+    }
+
+    .text-container {
+        flex: 2;
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 20px;
+    color: #66280a;
+}
+
+footer p{
+    text-transform: initial;
+}
+
+.accordion-body{
+   text-align: center;
+   justify-content: center
+}
+
+.accordion-body a{
+    text-decoration: none
+}
