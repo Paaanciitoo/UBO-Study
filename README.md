@@ -9,20 +9,6 @@
 4. [Características Principales](#características-principales)
 5. [Estructura del Contenido Radiológico](#estructura-del-contenido-radiológico)
 6. [Plantilla para Casos / Estudios](#plantilla-para-casos--estudios)
-7. [Modelo de Metadatos (Opcional)](#modelo-de-metadatos-opcional)
-8. [Tecnologías Utilizadas](#tecnologías-utilizadas)
-9. [Arquitectura del Sitio](#arquitectura-del-sitio)
-10. [Estructura de Carpetas Sugerida](#estructura-de-carpetas-sugerida)
-11. [Guía de Desarrollo Local](#guía-de-desarrollo-local)
-12. [Despliegue en GitHub Pages](#despliegue-en-github-pages)
-13. [Buenas Prácticas (Código, Accesibilidad & Rendimiento)](#buenas-prácticas-código-accesibilidad--rendimiento)
-14. [Convenciones de Nomenclatura](#convenciones-de-nomenclatura)
-15. [SEO y Metadatos](#seo-y-metadatos)
-16. [Roadmap](#roadmap)
-17. [Contribuciones](#contribuciones)
-18. [Licencia](#licencia)
-19. [Descargo de Responsabilidad](#descargo-de-responsabilidad)
-20. [Créditos y Referencias](#créditos-y-referencias)
 
 ---
 ## Descripción General
